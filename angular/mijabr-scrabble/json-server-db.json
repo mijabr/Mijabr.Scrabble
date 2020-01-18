@@ -1,0 +1,3197 @@
+{
+  "scrabble-getsquares": [
+    {
+      "x": 0,
+      "y": 0,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 0,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 0,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 13,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 2,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 3,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 3,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 4,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 5,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 6,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "name": "ST",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 7,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 8,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 9,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 11,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 11,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 12,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 3,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 1,
+      "y": 13,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 2,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "name": "TL",
+      "letterBonus": 3,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "name": "DW",
+      "letterBonus": 1,
+      "wordBonus": 2
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 0,
+      "y": 14,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    },
+    {
+      "x": 1,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 2,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 3,
+      "y": 14,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 5,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 6,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "name": "DL",
+      "letterBonus": 2,
+      "wordBonus": 1
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "name": "NS",
+      "letterBonus": 1,
+      "wordBonus": 1
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "name": "TW",
+      "letterBonus": 1,
+      "wordBonus": 3
+    }
+  ],
+  "scrabble-newgame": {
+    "bagTiles": [
+      {
+        "letter": " ",
+        "isBlank": true,
+        "value": 0,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": " ",
+        "isBlank": true,
+        "value": 0,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "E",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "A",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "I",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "O",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "O",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "O",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "O",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "O",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "O",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "O",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "N",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "N",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "N",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "N",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "N",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "R",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "R",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "R",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "R",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "R",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "T",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "T",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "T",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "T",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "T",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "T",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "L",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "L",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "L",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "L",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "S",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "S",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "S",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "S",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "U",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "U",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "U",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "U",
+        "value": 1,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "D",
+        "value": 2,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "D",
+        "value": 2,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "D",
+        "value": 2,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "D",
+        "value": 2,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "G",
+        "value": 2,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "G",
+        "value": 2,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "B",
+        "value": 3,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "B",
+        "value": 3,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "C",
+        "value": 3,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "C",
+        "value": 3,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "M",
+        "value": 3,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "M",
+        "value": 3,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "P",
+        "value": 3,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "F",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "F",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "H",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "H",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "V",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "V",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "W",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "W",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "Y",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "Y",
+        "value": 4,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "K",
+        "value": 5,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "J",
+        "value": 8,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "X",
+        "value": 8,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "Q",
+        "value": 10,
+        "location": "bag",
+        "trayPosition": 0
+      },
+      {
+        "letter": "Z",
+        "value": 10,
+        "location": "bag",
+        "trayPosition": 0
+      }
+    ],
+    "players": [
+      {
+        "name": "Mick",
+        "tiles": [
+          {
+            "letter": "Z",
+            "value": 10,
+            "location": "tray",
+            "trayPosition": 0
+          },
+          {
+            "letter": "A",
+            "value": 1,
+            "location": "tray",
+            "trayPosition": 1
+          },
+          {
+            "letter": "N",
+            "value": 1,
+            "location": "tray",
+            "trayPosition": 2
+          },
+          {
+            "letter": "I",
+            "value": 1,
+            "location": "tray",
+            "trayPosition": 3
+          },
+          {
+            "letter": "R",
+            "value": 1,
+            "location": "tray",
+            "trayPosition": 4
+          },
+          {
+            "letter": "O",
+            "value": 1,
+            "location": "tray",
+            "trayPosition": 5
+          },
+          {
+            "letter": " ",
+            "isBlank": true,
+            "value": 0,
+            "location": "tray",
+            "trayPosition": 6
+          }
+        ],
+        "score": 12
+      },
+      {
+        "name": "Scrabble Bot",
+        "tiles": [],
+        "score": 10
+      }
+    ],
+    "playerTurn": 0
+  },
+  "scrabble-submitgo": {
+    "message": "Your word is ZING. You scored 26.",
+    "isValid": true,
+    "game": {
+      "bagTiles": [
+        {
+          "letter": " ",
+          "isBlank": true,
+          "value": 0,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": " ",
+          "isBlank": true,
+          "value": 0,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "E",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "A",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "O",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "O",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "O",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "O",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "O",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "O",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "O",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "N",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "N",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "N",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "N",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "N",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "R",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "R",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "R",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "R",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "R",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "T",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "T",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "T",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "T",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "T",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "T",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "L",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "L",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "L",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "L",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "S",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "S",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "S",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "S",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "U",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "U",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "U",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "U",
+          "value": 1,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "D",
+          "value": 2,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "D",
+          "value": 2,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "D",
+          "value": 2,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "D",
+          "value": 2,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "G",
+          "value": 2,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "G",
+          "value": 2,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "B",
+          "value": 3,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "B",
+          "value": 3,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "C",
+          "value": 3,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "C",
+          "value": 3,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "M",
+          "value": 3,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "M",
+          "value": 3,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "P",
+          "value": 3,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "F",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "F",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "H",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "H",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "V",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "V",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "W",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "W",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "Y",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "Y",
+          "value": 4,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "K",
+          "value": 5,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "J",
+          "value": 8,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "X",
+          "value": 8,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "Q",
+          "value": 10,
+          "location": "bag",
+          "trayPosition": 0
+        },
+        {
+          "letter": "Z",
+          "value": 10,
+          "location": "bag",
+          "trayPosition": 0
+        }
+      ],
+      "players": [
+        {
+          "name": "Mick",
+          "tiles": [
+            {
+              "letter": "X",
+              "value": 8,
+              "location": "tray",
+              "trayPosition": 0
+            },
+            {
+              "letter": "A",
+              "value": 1,
+              "location": "tray",
+              "trayPosition": 1
+            },
+            {
+              "letter": "P",
+              "value": 3,
+              "location": "tray",
+              "trayPosition": 2
+            },
+            {
+              "letter": "O",
+              "value": 1,
+              "location": "tray",
+              "trayPosition": 3
+            },
+            {
+              "letter": "R",
+              "value": 1,
+              "location": "tray",
+              "trayPosition": 4
+            },
+            {
+              "letter": " ",
+              "value": 0,
+              "location": "tray",
+              "trayPosition": 5,
+              "isBlank": true
+            },
+            {
+              "letter": "Q",
+              "value": 10,
+              "location": "tray",
+              "trayPosition": 6
+            }
+          ],
+          "score": 36
+        },
+        {
+          "name": "Scrabble Bot",
+          "tiles": [],
+          "score": 10
+        }
+      ],
+      "boardTiles": [
+        {
+          "letter": "Z",
+          "value": 10,
+          "location": "board",
+          "boardPositionX": 7,
+          "boardPositionY": 6
+        },
+        {
+          "letter": "I",
+          "value": 1,
+          "location": "board",
+          "boardPositionX": 7,
+          "boardPositionY": 7
+        },
+        {
+          "letter": "N",
+          "value": 1,
+          "location": "board",
+          "boardPositionX": 7,
+          "boardPositionY": 8
+        },
+        {
+          "letter": "G",
+          "isBlank": true,
+          "value": 0,
+          "location": "board",
+          "boardPositionX": 7,
+          "boardPositionY": 9
+        }
+      ]
+    }
+  },
+  "scrabble-shortlist": [
+    {
+      "id": "7da442e2-6c2a-4da2-9076-c7ccf4c14c25",
+      "startTime": "2018-03-14T22:57:08.0635846+11:00",
+      "lastActiveTime": "2018-03-14T22:58:03.6638699+11:00",
+      "player": [
+        {
+          "name": "Player",
+          "score": 10
+        },
+        {
+          "name": "Scrabble Bot",
+          "score": 10
+        }
+      ]
+    }
+  ],
+  "words-is-a-word": {
+    "checkedWord": "your word",
+    "isWord": true
+  },
+  "words-is-not-a-word": {
+    "checkedWord": "your word",
+    "isWord": false
+  },
+  "findwords-found": {
+    "searchPattern": "your pattern",
+    "words": [
+      "apple",
+      "apply"
+    ]
+  },
+  "findwords-not-found": {
+    "searchPattern": "your pattern",
+    "words": []
+  },
+  "version": {
+    "version": "1.2.0.0"
+  },
+  "login": {
+    "result": false,
+    "reason": "Invalid username or password"
+  },
+  "join": {
+    "username": "Barney",
+    "result": true,
+    "token": "v2.local.token"
+  },
+  "race-meetings": [
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "RANDWICK",
+    "location": "NSW",
+    "date": "2018-10-17T00:00:00+11:00",
+    "prizeMoney": 1000000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "CAULFIELD",
+    "location": "VIC",
+    "date": "2018-10-17T00:00:00+11:00",
+    "prizeMoney": 2000000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "PORT LINCOLN",
+    "location": "SA",
+    "date": "2018-10-17T00:00:00+11:00",
+    "prizeMoney": 500000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "DOOMBEN",
+    "location": "QLD",
+    "date": "2018-10-17T00:00:00+11:00",
+    "prizeMoney": 750000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "NORTHAM",
+    "location": "WA",
+    "date": "2018-10-17T00:00:00+11:00",
+    "prizeMoney": 250000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "LAUNCESTON",
+    "location": "TAS",
+    "date": "2018-10-17T00:00:00+11:00"
+  }],
+  "race-meeting":
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "RANDWICK",
+    "location": "NSW",
+    "date": "2018-10-17T00:00:00+11:00"
+  },
+  "races": [{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "number": 1,
+    "name": "Cox Plate",
+    "startTime": "2018-10-24T06:50:00+00:00",
+    "distance": 1200,
+    "prizeMoney": 1000000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "number": 2,
+    "name": "Melbourne Cup",
+    "startTime": "2018-10-24T07:30:00+00:00",
+    "distance": 3200,
+    "prizeMoney": 20000000
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "number": 3,
+    "name": "Everest",
+    "startTime": "2018-10-24T08:10:00+00:00",
+    "distance": 2000,
+    "prizeMoney": 5000000
+  }],
+  "runners": [
+  {
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "raceNumber": 1,
+    "horseNumber": 1,
+    "name": "Quality Apparel",
+    "barrier": 11,
+    "weight": "65.5",
+    "isScratched": false,
+    "toteWin": {
+      "high": 4.5,
+      "low": 4.2,
+      "last": 4.2
+    },
+    "totePlace": {
+      "high": 1.8,
+      "low": 1.3,
+      "last": 1.4
+    },
+    "jockey": "Gus Philpot",
+    "trainer": "Reckless Robbie",
+    "placing": 3
+  },
+  {
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "raceNumber": 1,
+    "horseNumber": 2,
+    "name": "Coal Gold",
+    "barrier": 16,
+    "weight": "57.5",
+    "isScratched": false,
+    "toteWin": {
+      "high": 18.2,
+      "low": 12.6,
+      "last": 18.1
+    },
+    "totePlace": {
+      "high": 3.8,
+      "low": 3.2,
+      "last": 3.2
+    },
+    "jockey": "Keven O'Seven",
+    "trainer": "Lewis Duckworth",
+    "placing": 2
+  },
+  {
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "raceNumber": 1,
+    "horseNumber": 3,
+    "name": "Wishbone Sal",
+    "barrier": 8,
+    "weight": "125.5",
+    "isScratched": false,
+    "jockey": "Roger Flunker",
+    "trainer": "Simon Songking",
+    "mentions": [
+      {
+        "url": "https://racenet",
+        "context": "cold as ice",
+        "count": 1
+      },
+      {
+        "url": "https://racenet",
+        "context": "too hard",
+        "count": 1
+      },
+      {
+        "url": "https://racenet",
+        "context": "no chance",
+        "count": 1
+      }
+    ],
+    "tipCounts": [0,0,0,1]
+  },
+  {
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "raceNumber": 1,
+    "horseNumber": 4,
+    "name": "Shady Deeva",
+    "barrier": 24,
+    "weight": "75.2",
+    "isScratched": true,
+    "toteWin": {
+      "high": 0,
+      "low": 0,
+      "last": 0
+    },
+    "totePlace": {
+      "high": 0,
+      "low": 0,
+      "last": 0
+    },
+    "jockey": "Blade Padley",
+    "trainer": "Ryan Foddersmeddal and Roger Dagnermullock",
+    "placing": 0
+  },
+  {
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "raceNumber": 1,
+    "horseNumber": 5,
+    "name": "Rumble",
+    "barrier": 5,
+    "weight": "52.5",
+    "isScratched": false,
+    "toteWin": {
+      "high": 6.6,
+      "low": 6.5,
+      "last": 6.5
+    },
+    "totePlace": {
+      "high": 2.5,
+      "low": 2.2,
+      "last": 2.4
+    },
+    "jockey": "Diamond Dave",
+    "trainer": "Gai Waterhouse",
+    "placing": 1,
+    "mentions": [
+      {
+        "url": "https://racenet",
+        "context": "hot to trot",
+        "count": 1
+      },
+      {
+        "url": "https://racenet",
+        "context": "on fire",
+        "count": 1
+      },
+      {
+        "url": "https://racenet",
+        "context": "hot to trot",
+        "count": 1
+      },
+      {
+        "url": "https://racenet",
+        "context": "on fire",
+        "count": 1
+      },
+      {
+        "url": "https://racenet",
+        "context": "sure thing",
+        "count": 1
+      }
+    ],
+    "tipCounts": [2,0,3,0]
+  },
+  {
+    "meetingId": "00000000-0000-0000-0000-000000000000",
+    "raceNumber": 1,
+    "horseNumber": 6,
+    "name": "Grand Jury",
+    "barrier": 8,
+    "weight": "86.5",
+    "isScratched": false,
+    "toteWin": {
+      "high": 72.4,
+      "low": 68.9,
+      "last": 72.4
+    },
+    "totePlace": {
+      "high": 7.8,
+      "low": 6.8,
+      "last": 7.8
+    },
+    "jockey": "Judge Judy",
+    "trainer": "Crispan Justice",
+    "placing": 10,
+    "mentions": [
+      {
+        "url": "https://racenet",
+        "context": "possibility",
+        "count": 1
+      }
+    ]
+  }
+],
+"mentions": [
+  {
+    "url": "https://www.racenet.com.au/horse-racing-tips",
+    "context": "Teo Torriate",
+    "count": 1
+  },
+  {
+    "url": "https://www.racenet.com.au/news/vale-max-crockett-20181126",
+    "context": "Mackellar&amp;rsquo;s Love at &lt;a href=&quot;htt",
+    "count": 1
+  },
+  {
+    "url": "https://www.racenet.com.au/news/the-top-bets-from-greg-polson-for-ballina--monday-20181126",
+    "context": "Golden Lily has found her mark on the Northern Riv",
+    "count": 2
+  },
+  {
+    "url": "https://www.racenet.com.au/news/the-top-bets-from-greg-polson-for-ballina--monday-20181126",
+    "context": "Golden Lily&amp;nbsp;will be having her fourth sta",
+    "count": 1
+  },
+  {
+    "url": "https://www.racenet.com.au/news/the-top-bets-from-greg-polson-for-ballina--monday-20181126",
+    "context": "Golden Lily made up good ground when fourth over 1",
+    "count": 2
+  }],
+"tips": [
+  {
+    "tipperName": "RaceNet",
+    "context": "Top chance",
+    "position": 1
+  },
+  {
+    "tipperName": "ExpertJock",
+    "context": "Place Best",
+    "position": 3
+  },
+  {
+    "tipperName": "JustTheHorses",
+    "context": "Best Bet",
+    "position": 1
+  }
+]}

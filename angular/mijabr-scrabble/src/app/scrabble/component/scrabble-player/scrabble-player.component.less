@@ -1,0 +1,64 @@
+
+.player-view {
+  position: relative;
+  display: block;
+  .bag {
+    float: left;
+    .tile-count {
+      position: absolute;
+      top: 0.3em;
+      font-size: 0.9em;
+      margin: 1em;
+      color: #000000;
+      background-color: transparent;
+    }
+  }
+  .tile-tray-wrap {
+    margin: auto;
+    width: 70%;
+    .tile-tray {
+      display: inline-block;
+      background-color: #933;
+      .tile-drop-placeholder-edge {
+        display: inline-block;
+        margin: 0.3em;
+        font-weight: 700;
+        width: 3em;
+        height: 3em;
+        .tile-drop-placeholder {
+          position: absolute;
+          font-weight: 700;
+          background-color: transparent;
+          width: 3em;
+          height: 3em;
+        }
+        .scrabble-tile {
+          position: absolute;
+          font-weight: 700;
+          background-color: #ffffcc;
+          color: #000000;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .reset-tiles {
+    float: right;
+    margin-top: 0.3em;
+    padding: 0.3em;
+    cursor: pointer;
+    border: 1px grey solid;
+    border-radius: 0.3em;
+    background-color: #933;
+  }
+  .submit-go {
+    float: right;
+    margin-top: 0.3em;
+    padding: 0.3em;
+    cursor: pointer;
+    border: 1px grey solid;
+    border-radius: 0.3em;
+    background-color: #933;
+  }
+}

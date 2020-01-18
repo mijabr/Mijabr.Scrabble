@@ -1,0 +1,72 @@
+
+.scrabble-tile {
+  position: relative;
+  background-color: #ffffcc;
+  .tile-letter {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 2.2em;
+    line-height: 1.3em;
+    font-weight: 700;
+    background-color: #ffffcc00;
+    color: #000000;
+  }
+  .tile-value {
+    position: absolute;
+    background-color: #ffffcc00;
+    color: #000000;
+    height: 1em;
+    width: 1em;
+    right: 0.3em;
+    bottom: 0.3em;
+    font-size: 0.6em;
+    font-weight: 700;
+    text-align: center;
+  }
+  .blank-tile {
+    color: #cc0000;
+  }
+  input {
+    position: absolute;
+    background-color: #ffffccff;
+    color: #cc0000;
+    font-size: 2.2em;
+    font-weight: 700;
+    width: 100%;
+    height: 1.3em;
+    line-height: 1.3em;
+    text-align: center; 
+    vertical-align: center;
+    padding: 0px;
+    border: 0px;
+    left: 0px;
+    top: 0px;
+    text-transform: uppercase;
+  }
+}
+
+.shove-left {
+  transform: translate(-2em, 0);
+}
+
+.shove-right {
+  transform: translate(2em, 0);
+}
+
+.player-scrabble-tile {
+  cursor: pointer;
+  input {
+    cursor: pointer;
+  }
+}
+.player-scrabble-board-tile {
+  background-color: #ccccff;
+  input {
+    background-color: #ccccff;
+  }
+}
+
+.tile-dragging {
+  display: none;
+}

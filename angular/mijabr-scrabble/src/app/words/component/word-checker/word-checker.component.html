@@ -1,0 +1,11 @@
+<div class='word-checker'>
+  <form [formGroup]='wordForm' (ngSubmit)='checkWord($event)' autocomplete='off'>
+    <label for='word'>To check if a word is in the dictionary, type a word and then hit enter or press Check.</label>
+    <input formControlName='word' type='text' id='word' class='form-control'>
+    <lib-button usage='primary' type='submit'>Check</lib-button>
+  </form>
+  <div *ngIf='result != undefined'>
+    <label *ngIf='result.isWord' class='is-word'>{{result.checkedWord}} is in the dictionary</label>
+    <label *ngIf='!result.isWord' class='is-not-word'>{{result.checkedWord}} is not in the dictionary</label>
+  </div>
+</div>

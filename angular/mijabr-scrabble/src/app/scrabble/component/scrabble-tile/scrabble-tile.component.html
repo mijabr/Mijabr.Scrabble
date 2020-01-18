@@ -1,0 +1,19 @@
+<div *ngIf="owner === 'board'" class='scrabble-tile' [ngStyle]='{"height":tileSize,"width":tileSize}'>
+  <div [ngClass]="{'blank-tile': tile.isBlank}" class='tile-letter'>{{tile.letter}}</div>
+  <div *ngIf='tile.value > 0' class='tile-value'>{{tile.value}}</div>
+</div>
+<div *ngIf="owner === 'player' && tile.location === 'board'" class='scrabble-tile player-scrabble-tile'
+  [ngClass]="{'player-scrabble-board-tile':tile.location==='board'}" [ngStyle]='{"height":tileSize,"width":tileSize}'
+  draggable [dragClass]="'tile-dragging'" [dragData]='tile' (onDragStart)='onStartDragTile(tile)' (onDragEnd)='onEndDragTile(tile)'>
+  <div [ngClass]="{'blank-tile': tile.isBlank}" class='tile-letter'>{{tile.letter}}</div>
+  <div *ngIf='tile.value > 0' class='tile-value'>{{tile.value}}</div>
+  <input maxlength='1' *ngIf='tile.isBlank' type='text' [(ngModel)]='tile.letter' (keyup)="onKey($event)">
+</div>
+<div *ngIf="owner === 'player' && tile.location === 'tray'" class='scrabble-tile player-scrabble-tile'
+  [ngClass]="{'shove-left':shove==='left','shove-right':shove==='right'}"
+  [ngStyle]='{"height":tileSize,"width":tileSize}'
+  draggable [dragClass]="'tile-dragging'" [dragData]='tile' (onDragStart)='onStartDragTile(tile)' (onDragEnd)='onEndDragTile(tile)'>
+  <div [ngClass]="{'blank-tile': tile.isBlank}" class='tile-letter'>{{tile.letter}}</div>
+  <div *ngIf='tile.value > 0' class='tile-value'>{{tile.value}}</div>
+  <input maxlength='1' *ngIf='tile.isBlank' type='text' [(ngModel)]='tile.letter' (keyup)="onKey($event)">
+</div>

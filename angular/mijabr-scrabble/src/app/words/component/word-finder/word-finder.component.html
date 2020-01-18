@@ -1,0 +1,19 @@
+<div class='word-finder'>
+  <form [formGroup]='wordForm' (ngSubmit)='onFindClick($event)' autocomplete='off'>
+    <label for='pattern'>Find words using a search pattern. The ? symbol will match any letter.</label>
+    <label>e.g.</label>
+    <label>Pattern ?ppl? will find the words apple and apply.</label>
+    <input formControlName='pattern' type='text' id='pattern' class='form-control'>
+    <label for='letters'>Optionally restrict the letters available.</label>
+    <label>e.g.</label>
+    <label>Pattern ?ppl? and letters 'ay' will find the word apply. Apple would not be found as there is no e available.</label>
+    <input formControlName='letters' type='text' id='letters' class='form-control'>
+    <lib-button usage='primary' type='submit'>Find</lib-button>
+  </form>
+  <div *ngIf='result != undefined'>
+      <label *ngIf='result.words.length === 0'>No words were found matching the pattern.</label>
+      <div *ngIf='result.words.length != 0'>
+        <label>{{result.words.length}} words were found matching the pattern {{result.searchPattern}}.</label>
+      <ul><li *ngFor='let word of result.words'><label>{{word}}</label></li></ul>
+  </div>
+</div>

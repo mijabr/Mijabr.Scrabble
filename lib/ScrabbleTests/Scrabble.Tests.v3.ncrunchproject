@@ -1,0 +1,10 @@
+﻿<ProjectConfiguration>
+  <Settings>
+    <DefaultTestTimeout>1500</DefaultTestTimeout>
+    <IgnoredTests>
+      <NamedTestSelector>
+        <TestName>scrabble.tests.TileDrawerTests.PlayerTilesShouldBeDrawnAtRandom</TestName>
+      </NamedTestSelector>
+    </IgnoredTests>
+  </Settings>
+</ProjectConfiguration>

@@ -1,0 +1,53 @@
+
+.board {
+  margin: 1px;
+  padding: 0;
+  .board-square-rows {
+    display: flex;
+    flex-direction: row;
+    height: 6.66%;
+    .board-square-wrap {
+      width: 6.66%;
+      overflow: hidden;
+      .board-square {
+        height: 100%;
+        color: black;
+        display: block;
+        background-color: #dfffc0;
+        .name {
+          text-align: center;
+          line-height: 3em;
+          font-size: 1em;
+          background-color: #00000000;
+          color: #000000ff;
+        }
+      }
+      .board-square-Start {
+        background-color: #f998b9;
+      }
+      .board-square-NS {
+        .name {
+          display: none;
+        }
+      }
+      .board-square-DL {
+        background-color: #a7f6fa;
+      }
+      .board-square-TL {
+        background-color: #33b3f6;
+      }
+      .board-square-DW {
+        background-color: #f998b9;
+      }
+      .board-square-TW {
+        background-color: #f40c00;
+      }
+      .board-square-ST {
+        background-color: #f998b9;
+        .name {
+          display: none;
+        }
+      }
+    }
+  }
+}

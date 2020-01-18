@@ -1,0 +1,22 @@
+
+.modal-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1119;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  background-color: #fdb;
+  overflow: hidden;
+  border-radius: 2em;
+  top: 4em;
+  @media (max-width: 600px) {
+    top: 0;
+  }
+}

@@ -1,0 +1,19 @@
+<div class='app-card' [ngStyle]='{"max-height": maxHeight, "transition": transition}'>
+  <div *ngIf='cardHeader' class='app-card-header'>
+    <ng-content select='app-card-header'></ng-content>
+  </div>
+  <div class='app-card-content' [ngStyle]='{"height": contentHeight}'>
+    <div *ngIf='cardLeft' class='app-card-left'>
+      <ng-content select='app-card-left'></ng-content>
+    </div>
+    <div class='app-card-right'>
+      <div *ngIf='cardBodyTitle' class='app-card-body-title'>
+        <ng-content select='app-card-body-title'></ng-content>
+      </div>
+      <ng-content select='app-card-body'></ng-content>
+    </div>
+  </div>
+  <div *ngIf='cardFooter' class='app-card-footer'>
+    <ng-content select='app-card-footer'></ng-content>
+  </div>
+</div>

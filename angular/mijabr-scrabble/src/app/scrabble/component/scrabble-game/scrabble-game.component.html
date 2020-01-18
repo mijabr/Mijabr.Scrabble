@@ -1,0 +1,13 @@
+<div class='scrabble-game' [ngStyle]='{"font-size":fontSize}'>
+  <app-scrabble-board [game]='game' [boardSize]='boardSize' [tileSize]='tileSize'></app-scrabble-board>
+  <app-scrabble-player [game]='game' [boardSize]='boardSize' [tileSize]='tileSize' (go)='submitGo()' (message)='addMessage($event)'></app-scrabble-player>
+  <div class='game-progress' [ngStyle]='{"width":boardSize}'>
+    <div class='scoreboard'>
+      <app-scrabble-score [game]='game'></app-scrabble-score>
+    </div>
+    <div #gameLog class='game-log' [innerHtml]='message'></div>
+  </div>
+  <div class='game-toolbar'>
+    <app-scrabble-toolbar [game]='game' (newGame)='newGame()' (quitGame)='quitGame()'></app-scrabble-toolbar>
+  </div>
+</div>

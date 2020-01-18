@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Scrabble\Scrabble.csproj" />
+    <ProjectReference Include="..\Words\Words.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dictionary.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="TryCopyFrontEnd" Condition="$(Configuration) == 'DEBUG'" AfterTargets="PostBuildEvent">
+    <Exec Command="IF EXIST &quot;$(ProjectDir)..\..\angular\mijabr-scrabble\dist\mijabr-scrabble&quot; (xcopy /i /y /s &quot;$(ProjectDir)..\..\angular\mijabr-scrabble\dist\mijabr-scrabble\*.*&quot; &quot;$(ProjectDir)\wwwroot\scrabble\.&quot;)" />
+  </Target>
+
+</Project>

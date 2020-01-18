@@ -1,0 +1,6 @@
+<div>
+  <lib-button *ngIf='!game' usage='primary' (click)='onNewGame()'>Start New Game</lib-button>
+  <lib-button usage='primary' routerLink='/scrabble/list'>Lobby</lib-button>
+  <lib-button *ngIf='game' usage='primary' routerLink='/scrabble/words'>Word Cheat</lib-button>
+  <lib-button *ngIf='game' usage='primary' (click)='onQuitGame()'>Quit Game</lib-button>
+</div>

@@ -1,0 +1,5 @@
+<div *ngIf='show' class='modal-backdrop' (click)='onClickBackdrop()'>
+  <div class='modal-content' (click)='onClickContent($event)' [ngStyle]='{"width":width,"height":height}'>
+    <ng-content></ng-content>
+  </div>
+</div>

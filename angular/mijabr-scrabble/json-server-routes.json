@@ -1,0 +1,19 @@
+{
+  "/api/scrabble/getsquares": "/scrabble-getsquares",
+  "/api/scrabble/newgame": "/scrabble-newgame",
+  "/api/scrabble/submitgo": "/scrabble-submitgo",
+  "/api/scrabble/shortlist": "/scrabble-shortlist",
+  "/api/word/isword": "/words-is-a-word",
+  "/api/word/isword/*": "/words-is-not-a-word",
+  "/api/word/findwords": "/findwords-found",
+  "/api/word/findwords/a": "/findwords-not-found",
+  "/api/version": "/version",
+  "/api/login/login": "/login",
+  "/api/login/join": "/join",
+  "/api/racing/meetings": "/race-meetings",
+  "/api/racing/meeting": "/race-meeting",
+  "/api/racing/races": "/races",
+  "/api/racing/runners": "/runners",
+  "/api/racing/mentions": "/mentions",
+  "/api/racing/tips": "/tips"
+}

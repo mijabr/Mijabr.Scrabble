@@ -1,0 +1,23 @@
+<div class='player-view' *ngIf='game' [ngStyle]='{"width":boardSize}'>
+  <div class='bag'>
+    <app-icon-weight fill='white' background='transparent' size='3em'></app-icon-weight>
+    <div class='tile-count'>{{game.bagTiles.length}}</div>
+  </div>
+  <div class='submit-go' (click)='onSubmitGo()'>
+    <app-icon-thumb-up fill='white' background='transparent' size='2em'></app-icon-thumb-up>
+  </div>
+  <div class='tile-tray-wrap'>
+    <div class='tile-tray'>
+      <div *ngFor='let trayPosition of trayPlaceholders' class='tile-drop-placeholder-edge'>
+        <div class='tile-drop-placeholder' droppable (onDrop)='onTileDroppedOnPlaceholder($event,trayPosition)'></div>
+        <app-scrabble-tile *ngIf="getPlayerTileAtTrayPosition(trayPosition)"
+          [tile]='getPlayerTileAtTrayPosition(trayPosition)' [owner]='"player"' [tileSize]='tileSize' [shove]='shove[trayPosition]' droppable
+          (onDragEnter)='onDragEnterTrayTile(getPlayerTileAtTrayPosition(trayPosition))' (startDrag)='onTileDragStart($event)' (endDrag)='onTileDragEnd($event)'>
+        </app-scrabble-tile>
+      </div>
+    </div>
+    <div class='reset-tiles' (click)='onResetTiles()'>
+      <app-icon-arrow-down-bold fill='white' background='transparent' size='2em'></app-icon-arrow-down-bold>
+    </div>
+  </div>
+</div>

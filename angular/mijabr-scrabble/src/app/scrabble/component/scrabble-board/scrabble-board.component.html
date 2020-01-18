@@ -1,0 +1,12 @@
+<div class='board' [ngStyle]='{"height":boardSize,"width":boardSize}'>
+  <div class='board-square-rows' *ngFor='let cols of grid'>
+    <div class='board-square-wrap' *ngFor='let square of cols'>
+      <app-scrabble-tile *ngIf="getPlayerBoardTileAt(square)" [tile]='getPlayerBoardTileAt(square)' [owner]='"player"' [tileSize]='tileSize'></app-scrabble-tile>
+      <app-scrabble-tile *ngIf="getBoardTileAt(square)" [tile]='getBoardTileAt(square)' [owner]='"board"' [tileSize]='tileSize'></app-scrabble-tile>
+      <div *ngIf='square' class='board-square' droppable (onDrop)='onTileDrop($event,square.x,square.y)' [ngClass]="'board-square-' + square.name">
+        <div class='name'>{{square.name}}</div>
+        <app-icon-star *ngIf='square.name==="ST"' background='transparent' fill='black' size='3em'></app-icon-star>
+      </div>
+    </div>
+  </div>
+</div>

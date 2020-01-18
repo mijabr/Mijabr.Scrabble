@@ -1,0 +1,7 @@
+<lib-button usage='secondary' routerLink='/scrabble/game'>Back to scrabble</lib-button>
+<div *ngFor='let game of gameList; let i = index'>
+  <span>{{i + 1}}.</span>
+  <span *ngIf='game.startTime'>Started {{game.startTime}} - </span>
+  <span *ngFor='let player of game.player'>{{player.name}} {{player.score}} - </span>
+  <span *ngIf='game.lastActiveTime'>Last move made at {{game.lastActiveTime}}</span>
+</div>
