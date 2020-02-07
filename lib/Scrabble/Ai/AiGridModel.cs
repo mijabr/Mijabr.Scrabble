@@ -60,14 +60,14 @@ namespace Scrabble.Ai
 
         public List<Tile> PlayerTiles { get; private set; }
 
-        AiCandidate currentCandidate;
+        private AiCandidate currentCandidate;
 
-        void Clear()
+        private void Clear()
         {
             Grid = new AiGridModelTile[15, 15];
         }
 
-        void AddTilesToModel(IEnumerable<Tile> tiles)
+        private void AddTilesToModel(IEnumerable<Tile> tiles)
         {
             foreach (var tile in tiles)
             {
@@ -75,7 +75,7 @@ namespace Scrabble.Ai
             }
         }
 
-        void AddTileToModel(Tile tile)
+        private void AddTileToModel(Tile tile)
         {
             Grid[tile.BoardPositionX, tile.BoardPositionY].Letter = tile.Letter;
             Grid[tile.BoardPositionX, tile.BoardPositionY].TileValue = tile.Value;
@@ -85,7 +85,7 @@ namespace Scrabble.Ai
             SetNextToTile(tile.BoardPositionX, tile.BoardPositionY + 1);
         }
 
-        void SetNextToTile(int x, int y)
+        private void SetNextToTile(int x, int y)
         {
             if (x >= 0 && y >= 0 && x < 15 && y < 15)
             {
@@ -93,7 +93,7 @@ namespace Scrabble.Ai
             }
         }
 
-        bool NextCandidate()
+        private bool NextCandidate()
         {
             while (currentCandidate.Next(PlayerTiles.Count))
             {
@@ -106,19 +106,14 @@ namespace Scrabble.Ai
             return false;
         }
 
-        bool IsValidCandidate()
+        private bool IsValidCandidate()
         {
-            if (currentCandidate.Orientation == 0)
-            {
-                return IsValidHorizontalCandidate();
-            }
-            else
-            {
-                return IsValidVerticalCandidate();
-            }
+            return currentCandidate.Orientation == 0 
+                ? IsValidHorizontalCandidate() 
+                : IsValidVerticalCandidate();
         }
 
-        bool IsValidHorizontalCandidate()
+        private bool IsValidHorizontalCandidate()
         {
             if (currentCandidate.TilesUsed == 1 && (IsRightOfStartingSpotEmpty() || (IsStartAtBoardRight() && IsStartingSpotEmpty())) && (IsLeftOfStartingSpotEmpty() || (IsStartAtBoardLeft() && IsStartingSpotEmpty()) ))
             {
@@ -132,10 +127,10 @@ namespace Scrabble.Ai
                 return false;
             }
 
-            int tilesLeftToPlace = currentCandidate.TilesUsed;
-            bool isJoined = false;
+            var tilesLeftToPlace = currentCandidate.TilesUsed;
+            var isJoined = false;
             currentCandidate.SearchPattern = string.Empty;
-            int placeX = currentCandidate.StartX;
+            var placeX = currentCandidate.StartX;
 
             while (placeX < 15 && (tilesLeftToPlace > 0 || Grid[placeX, currentCandidate.StartY].Letter != 0))
             {
@@ -160,7 +155,7 @@ namespace Scrabble.Ai
             return (tilesLeftToPlace == 0 && isJoined);
         }
 
-        bool IsValidVerticalCandidate()
+        private bool IsValidVerticalCandidate()
         {
             if (!IsAboveOfStartingSpotEmpty() && (!IsStartAtBoardTop() || IsStartingSpotEmpty()))
             {
@@ -172,10 +167,10 @@ namespace Scrabble.Ai
                 return false;
             }
 
-            int tilesLeftToPlace = currentCandidate.TilesUsed;
-            bool isJoined = false;
+            var tilesLeftToPlace = currentCandidate.TilesUsed;
+            var isJoined = false;
             currentCandidate.SearchPattern = string.Empty;
-            int placeY = currentCandidate.StartY;
+            var placeY = currentCandidate.StartY;
 
             while (placeY < 15 && (tilesLeftToPlace > 0 || Grid[currentCandidate.StartX, placeY].Letter != 0))
             {
@@ -200,57 +195,57 @@ namespace Scrabble.Ai
             return (tilesLeftToPlace == 0 && isJoined);
         }
 
-        bool IsStartingSpotEmpty()
+        private bool IsStartingSpotEmpty()
         {
             return Grid[currentCandidate.StartX, currentCandidate.StartY].Letter == 0;
         }
 
-        bool IsLeftOfStartingSpotEmpty()
+        private bool IsLeftOfStartingSpotEmpty()
         {
             return currentCandidate.StartX > 0 && Grid[currentCandidate.StartX - 1, currentCandidate.StartY].Letter == 0;
         }
 
-        bool IsRightOfStartingSpotEmpty()
+        private bool IsRightOfStartingSpotEmpty()
         {
             return currentCandidate.StartX < 14 && Grid[currentCandidate.StartX + 1, currentCandidate.StartY].Letter == 0;
         }
 
-        bool IsAboveOfStartingSpotEmpty()
+        private bool IsAboveOfStartingSpotEmpty()
         {
             return currentCandidate.StartY > 0 && Grid[currentCandidate.StartX, currentCandidate.StartY - 1].Letter == 0;
         }
 
-        bool IsBelowOfStartingSpotEmpty()
+        private bool IsBelowOfStartingSpotEmpty()
         {
             return currentCandidate.StartY < 14 && Grid[currentCandidate.StartX, currentCandidate.StartY + 1].Letter == 0;
         }
 
-        bool IsStartAtBoardCentre()
+        private bool IsStartAtBoardCentre()
         {
             return currentCandidate.StartX == 7 && currentCandidate.StartY == 7;
         }
 
-        bool IsStartAtBoardLeft()
+        private bool IsStartAtBoardLeft()
         {
             return currentCandidate.StartX == 0;
         }
 
-        bool IsStartAtBoardRight()
+        private bool IsStartAtBoardRight()
         {
             return currentCandidate.StartX == 14;
         }
 
-        bool IsStartAtBoardTop()
+        private bool IsStartAtBoardTop()
         {
             return currentCandidate.StartY == 0;
         }
 
-        bool IsStartAtBoardBottom()
+        private bool IsStartAtBoardBottom()
         {
             return currentCandidate.StartY == 14;
         }
 
-        bool IsSpecialStartingGo()
+        private bool IsSpecialStartingGo()
         {
             return IsStartAtBoardCentre() && IsAboveOfStartingSpotEmpty() && IsBelowOfStartingSpotEmpty();
         }

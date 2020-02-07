@@ -7,7 +7,8 @@ namespace Scrabble.Go
 {
     public class GoValidator : IGoValidator
     {
-        IGridModel gridModelable;
+        private readonly IGridModel gridModelable;
+
         public GoValidator(IGridModel gridModelable)
         {
             this.gridModelable = gridModelable;
@@ -23,26 +24,25 @@ namespace Scrabble.Go
             return result;
         }
 
-        Validatable validatable;
-        GoValidationResult result;
-        IEnumerable<Tile> usedPlayerTiles;
+        private Validatable validatable;
+        private GoValidationResult result;
+        private IEnumerable<Tile> usedPlayerTiles;
 
-        void ApplyValidationChecks()
+        private void ApplyValidationChecks()
         {
             var validationChecks = GetValidationChecks();
             foreach (var validationCheck in validationChecks)
             {
                 validationCheck();
 
-                if (result.Message != null)
-                {
-                    result.IsValid = false;
-                    break;
-                }
+                if (result.Message == null) continue;
+
+                result.IsValid = false;
+                break;
             }
         }
 
-        Action[] GetValidationChecks()
+        private IEnumerable<Action> GetValidationChecks()
         {
             return new Action[]
             {
@@ -58,7 +58,7 @@ namespace Scrabble.Go
             };
         }
 
-        void CheckIfPlayerHasAnyTiles()
+        private void CheckIfPlayerHasAnyTiles()
         {
             if (validatable.CurrentPlayer().Tiles.Count == 0)
             {
@@ -66,29 +66,28 @@ namespace Scrabble.Go
             }
         }
 
-        void CheckIfPlayerHasPlacedAnyTiles()
+        private void CheckIfPlayerHasPlacedAnyTiles()
         {
             usedPlayerTiles = validatable.CurrentPlayer().Tiles.Where(t => t.Location == "board");
-            if (usedPlayerTiles.Count() == 0)
+            if (!usedPlayerTiles.Any())
             {
                 result.Message = "Player must use at least one tile";
             }
         }
 
-        void CheckIfCentreSquareIsUsed()
+        private void CheckIfCentreSquareIsUsed()
         {
             var centreTile = validatable.BoardTiles.FirstOrDefault(t => t.BoardPositionX == 7 && t.BoardPositionY == 7);
-            if (centreTile.IsDefault())
+            if (!centreTile.IsDefault()) return;
+
+            var playerCentreTile = usedPlayerTiles.FirstOrDefault(t => t.BoardPositionX == 7 && t.BoardPositionY == 7);
+            if (playerCentreTile.IsDefault())
             {
-                var playerCentreTile = usedPlayerTiles.FirstOrDefault(t => t.BoardPositionX == 7 && t.BoardPositionY == 7);
-                if (playerCentreTile.IsDefault())
-                {
-                    result.Message = "The centre starting square must be used on the first turn";
-                }
+                result.Message = "The centre starting square must be used on the first turn";
             }
         }
 
-        void CheckIfTilesPlacedInASingleRowOrColumn()
+        private void CheckIfTilesPlacedInASingleRowOrColumn()
         {
             BuildGridModel();
 
@@ -98,12 +97,12 @@ namespace Scrabble.Go
             }
         }
 
-        void BuildGridModel()
+        private void BuildGridModel()
         {
             gridModelable.Build(usedPlayerTiles.ToList(), validatable.BoardTiles);
         }
 
-        void CheckIfTilesPlacedIntoEmptyBoardSpaces()
+        private void CheckIfTilesPlacedIntoEmptyBoardSpaces()
         {
             if (gridModelable.IsPlayerTileOnOccupiedSpace)
             {
@@ -111,72 +110,68 @@ namespace Scrabble.Go
             }
         }
 
-        void CheckIfTilesPlacedHorizontallyHaveAnyGaps()
+        private void CheckIfTilesPlacedHorizontallyHaveAnyGaps()
         {
-            if (gridModelable.MinY == gridModelable.MaxY)
+            if (gridModelable.MinY != gridModelable.MaxY) return;
+
+            var x = gridModelable.MinX;
+            var y = gridModelable.MinY;
+            var playerTileCount = 0;
+            while (x < 15 && playerTileCount < usedPlayerTiles.Count())
             {
-                int x = gridModelable.MinX;
-                int y = gridModelable.MinY;
-                var playerTileCount = 0;
-                while (x < 15 && playerTileCount < usedPlayerTiles.Count())
+                if (gridModelable.Grid[x, y].Origin == GridModelTileOrigin.FromPlayer)
                 {
-                    if (gridModelable.Grid[x, y].Origin == GridModelTileOrigin.FromPlayer)
-                    {
-                        playerTileCount++;
-                    }
-
-                    if (gridModelable.Grid[x, y].IsEmpty())
-                    {
-                        result.Message = "Tiles must be placed without any gaps";
-                    }
-
-                    x++;
+                    playerTileCount++;
                 }
+
+                if (gridModelable.Grid[x, y].IsEmpty())
+                {
+                    result.Message = "Tiles must be placed without any gaps";
+                }
+
+                x++;
             }
         }
 
-        void CheckIfTilesPlacedVerticallyHaveAnyGaps()
+        private void CheckIfTilesPlacedVerticallyHaveAnyGaps()
         {
-            if (gridModelable.MinX == gridModelable.MaxX)
+            if (gridModelable.MinX != gridModelable.MaxX) return;
+
+            var x = gridModelable.MinX;
+            var y = gridModelable.MinY;
+            var playerTileCount = 0;
+            while (y < 15 && playerTileCount < usedPlayerTiles.Count())
             {
-                int x = gridModelable.MinX;
-                int y = gridModelable.MinY;
-                var playerTileCount = 0;
-                while (y < 15 && playerTileCount < usedPlayerTiles.Count())
+                if (gridModelable.Grid[x, y].Origin == GridModelTileOrigin.FromPlayer)
                 {
-                    if (gridModelable.Grid[x, y].Origin == GridModelTileOrigin.FromPlayer)
-                    {
-                        playerTileCount++;
-                    }
-
-                    if (gridModelable.Grid[x, y].IsEmpty())
-                    {
-                        result.Message = "Tiles must be placed without any gaps";
-                    }
-
-                    y++;
+                    playerTileCount++;
                 }
+
+                if (gridModelable.Grid[x, y].IsEmpty())
+                {
+                    result.Message = "Tiles must be placed without any gaps";
+                }
+
+                y++;
             }
         }
 
-        void CheckIfTilesPlacedAdjacentToExistingTiles()
+        private void CheckIfTilesPlacedAdjacentToExistingTiles()
         {
-            foreach (var tile in usedPlayerTiles)
+            if (usedPlayerTiles.Any(tile =>
+                (tile.BoardPositionX == 7 && tile.BoardPositionY == 7) ||
+                (tile.BoardPositionX > 0 && gridModelable.Grid[tile.BoardPositionX - 1, tile.BoardPositionY].Origin == GridModelTileOrigin.FromBoard) ||
+                (tile.BoardPositionX < 14 && gridModelable.Grid[tile.BoardPositionX + 1, tile.BoardPositionY].Origin == GridModelTileOrigin.FromBoard) || 
+                (tile.BoardPositionY > 0 && gridModelable.Grid[tile.BoardPositionX, tile.BoardPositionY - 1].Origin == GridModelTileOrigin.FromBoard)  || 
+                (tile.BoardPositionY < 14 && gridModelable.Grid[tile.BoardPositionX, tile.BoardPositionY + 1].Origin == GridModelTileOrigin.FromBoard)))
             {
-                if ((tile.BoardPositionX == 7 && tile.BoardPositionY == 7)
-                || (tile.BoardPositionX > 0 && gridModelable.Grid[tile.BoardPositionX - 1, tile.BoardPositionY].Origin == GridModelTileOrigin.FromBoard)
-                || (tile.BoardPositionX < 14 && gridModelable.Grid[tile.BoardPositionX + 1, tile.BoardPositionY].Origin == GridModelTileOrigin.FromBoard)
-                || (tile.BoardPositionY > 0 && gridModelable.Grid[tile.BoardPositionX, tile.BoardPositionY - 1].Origin == GridModelTileOrigin.FromBoard)
-                || (tile.BoardPositionY < 14 && gridModelable.Grid[tile.BoardPositionX, tile.BoardPositionY + 1].Origin == GridModelTileOrigin.FromBoard))
-                {
-                    return;
-                }
+                return;
             }
 
             result.Message = "Tiles must be placed adjacent to existing board tiles";
         }
 
-        void CheckIfUsedBlankTilesHaveASubstituteLetter()
+        private void CheckIfUsedBlankTilesHaveASubstituteLetter()
         {
             foreach (var tile in usedPlayerTiles)
             {

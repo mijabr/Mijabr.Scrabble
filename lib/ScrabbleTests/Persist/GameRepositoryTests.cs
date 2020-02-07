@@ -27,7 +27,7 @@ namespace Scrabble.Tests
 
         Game AddNewGame(int score1 = 0, int score2 = 0)
         {
-            var g = gameFactory.NewGame();
+            var g = gameFactory.NewGame("Player");
             g.Players[0].Name = "P1";
             g.Players[0].Score = score1;
             g.Players[1].Name = "P2";

@@ -1,17 +1,19 @@
 ﻿using Scrabble.Draw;
 using Scrabble.Value;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Scrabble.Go
 {
     public class GoHandler : IGoHandler
     {
-        IGoValidator validator;
-        ITileDrawer drawer;
-        IGoWordFinder goWordFinder;
-        IGoWordValidator goWordValidator;
-        IGoScorer goScorer;
-        IGoMessageMaker goMessageMaker;
+        private readonly IGoValidator validator;
+        private readonly ITileDrawer drawer;
+        private readonly IGoWordFinder goWordFinder;
+        private readonly IGoWordValidator goWordValidator;
+        private readonly IGoScorer goScorer;
+        private readonly IGoMessageMaker goMessageMaker;
+
         public GoHandler(
             IGoValidator validator,
             ITileDrawer drawer,
@@ -28,9 +30,9 @@ namespace Scrabble.Go
             this.goMessageMaker = goMessageMaker;
         }
 
-        public GoResult Go(Game game)
+        public GoResult Go(Game theGame)
         {
-            this.game = game;
+            this.game = theGame;
 
             DoBasicValidation();
             if (!basicValidationResult.IsValid)
@@ -69,28 +71,28 @@ namespace Scrabble.Go
             return result;
         }
 
-        void FindGoWords()
+        private void FindGoWords()
         {
             goWords = goWordFinder.FindWords();
         }
 
-        Game game;
-        GoValidationResult basicValidationResult;
-        IEnumerable<GoWord> goWords;
-        GoValidationResult wordValidationResult;
-        int goScore;
+        private Game game;
+        private GoValidationResult basicValidationResult;
+        private IEnumerable<GoWord> goWords;
+        private GoValidationResult wordValidationResult;
+        private int goScore;
 
-        void DoBasicValidation()
+        private void DoBasicValidation()
         {
             basicValidationResult = validator.ValidateGo(game);
         }
 
-        void DoGoWordValidation()
+        private void DoGoWordValidation()
         {
             wordValidationResult = goWordValidator.ValidateWords(goWords);
         }
 
-        GoResult BasicValidationErrorResult()
+        private GoResult BasicValidationErrorResult()
         {
             return new GoResult()
             {
@@ -99,7 +101,7 @@ namespace Scrabble.Go
             };
         }
 
-        GoResult WordValidationErrorResult()
+        private GoResult WordValidationErrorResult()
         {
             return new GoResult()
             {
@@ -108,7 +110,7 @@ namespace Scrabble.Go
             };
         }
 
-        GoResult SuccessResult()
+        private GoResult SuccessResult()
         {
             return new GoResult()
             {
@@ -119,26 +121,23 @@ namespace Scrabble.Go
             };
         }
 
-        void ScoreGo()
+        private void ScoreGo()
         {
             goScore = goScorer.ScoreGo(goWords);
             game.CurrentPlayer().Score += goScore;
         }
 
-        void MovePlayerTilesToBoard()
+        private void MovePlayerTilesToBoard()
         {
-            foreach (var tile in game.CurrentPlayer().Tiles)
+            foreach (var tile in game.CurrentPlayer().Tiles.Where(tile => tile.Location == "board"))
             {
-                if (tile.Location == "board")
-                {
-                    game.BoardTiles.Add(tile);
-                }
+                game.BoardTiles.Add(tile);
             }
 
             game.CurrentPlayer().Tiles.RemoveAll(t => t.Location == "board");
         }
 
-        void SetTurnToNextPlayer()
+        private void SetTurnToNextPlayer()
         {
             game.PlayerTurn++;
             if (game.PlayerTurn >= game.Players.Count)

@@ -6,19 +6,20 @@ namespace Scrabble.Go
 {
     public class GridModel : IGridModel
     {
-        Board board;
+        private readonly Board board;
+
         public GridModel(Board board)
         {
             this.board = board;
         }
 
-        public void Build(List<Tile> PlayerTiles, List<Tile> BoardTiles)
+        public void Build(List<Tile> playerTiles, List<Tile> boardTiles)
         {
             Clear();
-            AddTilesToModel(BoardTiles, GridModelTileOrigin.FromBoard);
-            AddTilesToModel(PlayerTiles, GridModelTileOrigin.FromPlayer);
-            IsSingleTileGo = PlayerTiles.Count() == 1;
-            CollectPlayerGoInformation(PlayerTiles);
+            AddTilesToModel(boardTiles, GridModelTileOrigin.FromBoard);
+            AddTilesToModel(playerTiles, GridModelTileOrigin.FromPlayer);
+            IsSingleTileGo = playerTiles.Count() == 1;
+            CollectPlayerGoInformation(playerTiles);
         }
 
         public GridModelTile[,] Grid { get; private set; }
@@ -34,17 +35,16 @@ namespace Scrabble.Go
         {
             get
             {
-                if (IsSingleTileGo)
-                {
-                    if (IsBoardTileLeftOrRight())
-                    {
-                        return true;
-                    }
+                if (!IsSingleTileGo) return (MinY == MaxY);
 
-                    if (IsBoardTileAboveOrBelow())
-                    {
-                        return false;
-                    }
+                if (IsBoardTileLeftOrRight())
+                {
+                    return true;
+                }
+
+                if (IsBoardTileAboveOrBelow())
+                {
+                    return false;
                 }
 
                 return (MinY == MaxY);
@@ -55,22 +55,21 @@ namespace Scrabble.Go
         {
             get
             {
-                if (IsSingleTileGo)
+                if (!IsSingleTileGo) return (MinX == MaxX);
+
+                if (IsHorizontalGo)
                 {
-                    if (IsHorizontalGo)
-                    {
-                        return false;
-                    }
+                    return false;
+                }
 
-                    if (IsBoardTileAboveOrBelow())
-                    {
-                        return true;
-                    }
+                if (IsBoardTileAboveOrBelow())
+                {
+                    return true;
+                }
 
-                    if (IsBoardTileLeftOrRight())
-                    {
-                        return false;
-                    }
+                if (IsBoardTileLeftOrRight())
+                {
+                    return false;
                 }
 
                 return (MinX == MaxX);
@@ -94,32 +93,30 @@ namespace Scrabble.Go
             {
                 return board.GetSquare(x, y);
             }
-            else
-            {
-                return BoardSquare.NormalSquare();
-            }
+
+            return BoardSquare.NormalSquare();
         }
 
-        bool IsBoardTileAboveOrBelow()
+        private bool IsBoardTileAboveOrBelow()
         {
             return (MinY > 0 && !Grid[MinX, MinY - 1].IsEmpty())
                 || (MinY < 14 && !Grid[MinX, MinY + 1].IsEmpty());
         }
 
-        bool IsBoardTileLeftOrRight()
+        private bool IsBoardTileLeftOrRight()
         {
             return (MinX > 0 && !Grid[MinX - 1, MinY].IsEmpty())
                 || (MinX < 14 && !Grid[MinX + 1, MinY].IsEmpty());
         }
 
-        void Clear()
+        private void Clear()
         {
             Grid = new GridModelTile[15, 15];
             IsPlayerTileOnOccupiedSpace = false;
             IsSingleTileGo = false;
         }
 
-        void AddTilesToModel(IEnumerable<Tile> tiles, GridModelTileOrigin origin)
+        private void AddTilesToModel(IEnumerable<Tile> tiles, GridModelTileOrigin origin)
         {
             foreach (var tile in tiles)
             {
@@ -127,7 +124,7 @@ namespace Scrabble.Go
             }
         }
 
-        void AddTileToModel(GridModelTileOrigin origin, Tile tile)
+        private void AddTileToModel(GridModelTileOrigin origin, Tile tile)
         {
             if (origin == GridModelTileOrigin.FromPlayer)
             {
@@ -142,7 +139,7 @@ namespace Scrabble.Go
             };
         }
 
-        void CheckIfSpaceIsAlreadyOccupied(Tile tile)
+        private void CheckIfSpaceIsAlreadyOccupied(Tile tile)
         {
             if (Grid[tile.BoardPositionX, tile.BoardPositionY].Letter != 0)
             {
@@ -150,38 +147,35 @@ namespace Scrabble.Go
             }
         }
 
-        void CollectPlayerGoInformation(List<Tile> PlayerTiles)
+        private void CollectPlayerGoInformation(List<Tile> playerTiles)
         {
-            if (PlayerTiles.Count() > 0)
+            if (!playerTiles.Any()) return;
+
+            GoStartX = MinX = playerTiles.Min(t => t.BoardPositionX);
+            GoStartY = MinY = playerTiles.Min(t => t.BoardPositionY);
+            MaxX = playerTiles.Max(t => t.BoardPositionX);
+            MaxY = playerTiles.Max(t => t.BoardPositionY);
+            AdjustStartingPositionForHorizontalGos();
+            AdjustStartingPositionForVerticalGos();
+        }
+
+        private void AdjustStartingPositionForVerticalGos()
+        {
+            if (!IsVerticalGo) return;
+
+            while (GoStartY > 0 && !Grid[GoStartX, GoStartY - 1].IsEmpty())
             {
-                GoStartX = MinX = PlayerTiles.Min(t => t.BoardPositionX);
-                GoStartY = MinY = PlayerTiles.Min(t => t.BoardPositionY);
-                MaxX = PlayerTiles.Max(t => t.BoardPositionX);
-                MaxY = PlayerTiles.Max(t => t.BoardPositionY);
-                AdjustStartingPositionForHoritontalGos();
-                AdjustStartingPositionForVerticalGos();
+                GoStartY--;
             }
         }
 
-        void AdjustStartingPositionForVerticalGos()
+        private void AdjustStartingPositionForHorizontalGos()
         {
-            if (IsVerticalGo)
-            {
-                while (GoStartY > 0 && !Grid[GoStartX, GoStartY - 1].IsEmpty())
-                {
-                    GoStartY--;
-                }
-            }
-        }
+            if (!IsHorizontalGo) return;
 
-        void AdjustStartingPositionForHoritontalGos()
-        {
-            if (IsHorizontalGo)
+            while (GoStartX > 0 && !Grid[GoStartX - 1, GoStartY].IsEmpty())
             {
-                while (GoStartX > 0 && !Grid[GoStartX - 1, GoStartY].IsEmpty())
-                {
-                    GoStartX--;
-                }
+                GoStartX--;
             }
         }
     }

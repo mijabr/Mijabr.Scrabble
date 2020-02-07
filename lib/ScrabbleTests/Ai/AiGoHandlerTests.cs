@@ -29,7 +29,7 @@ namespace Scrabble.Tests
         [TestInitialize]
         public void SetUp()
         {
-            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame();
+            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame("Player");
             game.Players[0].Tiles.Add(new Tile() { Letter = 'A' });
 
             aiGridModel = Substitute.For<IAiGridModel>();

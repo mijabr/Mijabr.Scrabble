@@ -19,7 +19,7 @@ namespace Scrabble.Tests
         public void SetUp()
         {
             placer = new AiGoPlacer();
-            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame();
+            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame("Player");
             game.Players[0].Tiles.Clear();
             go = new AiValidGo();
         }

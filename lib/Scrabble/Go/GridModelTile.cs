@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Scrabble.Go
+﻿namespace Scrabble.Go
 {
     public struct GridModelTile
     {

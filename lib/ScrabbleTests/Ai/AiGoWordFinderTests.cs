@@ -171,7 +171,7 @@ namespace Scrabble.Tests
         [TestMethod]
         public void GivenMainWordUsingPlayerLetters_ThenBonusesShouldComeFromTheBoard()
         {
-            board.GetSquare(8, 7).Returns(BoardSquare.TrippleWordSquare());
+            board.GetSquare(8, 7).Returns(BoardSquare.TripleWordSquare());
             GivenTwoLetterCandidateUsingStartingBoardTile();
             WhenFindWords("at");
             var goLetters = goWords.First().GoLetters;
@@ -183,7 +183,7 @@ namespace Scrabble.Tests
         [TestMethod]
         public void GivenMainWordUsingBoardLetters_ThenBonusesAreAllreadyUsed()
         {
-            board.GetSquare(7, 7).Returns(BoardSquare.TrippleWordSquare());
+            board.GetSquare(7, 7).Returns(BoardSquare.TripleWordSquare());
             GivenTwoLetterCandidateUsingStartingBoardTile();
             WhenFindWords("at");
             var goLetters = goWords.First().GoLetters;
@@ -197,7 +197,7 @@ namespace Scrabble.Tests
         {
             GivenTwoLetterCandidateUsingStartingBoardTile();
             grid[8, 6].Letter = 'i';
-            board.GetSquare(8, 6).Returns(BoardSquare.TrippleWordSquare());
+            board.GetSquare(8, 6).Returns(BoardSquare.TripleWordSquare());
             WhenFindWords("at");
             var sideGoLetters = goWords.First(w => w.Word == "it").GoLetters;
             sideGoLetters.Count().ShouldBe(2);

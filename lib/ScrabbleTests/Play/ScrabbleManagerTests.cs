@@ -41,14 +41,14 @@ namespace Scrabble.Tests
         [TestMethod]
         public void WhenCreatingANewGame_ThenDrawTilesForAllPlayers()
         {
-            var game = manager.NewGame();
+            var game = manager.NewGame("Player");
             drawer.Received().DrawTilesForAllPlayers(game);
         }
 
         [TestMethod]
         public void WhenCreatingANewGame_ThenGameShouldBeSavedToGameList()
         {
-            var game = manager.NewGame();
+            var game = manager.NewGame("Player");
             gameList.Received().Set(game);
         }
 

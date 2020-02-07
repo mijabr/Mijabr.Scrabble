@@ -29,7 +29,7 @@ namespace Scrabble.Value
             return new BoardSquare(x, y, "DL", 2, 1);
         }
 
-        public static BoardSquare TrippleLetterSquare(int x = 0, int y = 0)
+        public static BoardSquare TripleLetterSquare(int x = 0, int y = 0)
         {
             return new BoardSquare(x, y, "TL", 3, 1);
         }
@@ -39,7 +39,7 @@ namespace Scrabble.Value
             return new BoardSquare(x, y, "DW", 1, 2);
         }
 
-        public static BoardSquare TrippleWordSquare(int x = 0, int y = 0)
+        public static BoardSquare TripleWordSquare(int x = 0, int y = 0)
         {
             return new BoardSquare(x, y, "TW", 1, 3);
         }

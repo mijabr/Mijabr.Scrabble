@@ -16,7 +16,7 @@ namespace Mijabr.Scrabble
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var host = System.Environment.GetEnvironmentVariable("host") ?? "localtest.me";
+            var host = Environment.GetEnvironmentVariable("host") ?? "localtest.me";
             Console.WriteLine($"Using host {host}");
 
             services.AddCors(options =>
@@ -39,6 +39,8 @@ namespace Mijabr.Scrabble
                 });
 
             services.AddControllers();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

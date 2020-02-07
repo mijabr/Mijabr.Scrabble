@@ -9,12 +9,13 @@ namespace Scrabble.Ai
 {
     public class AiGoHandler : IAiGoHandler
     {
-        IAiGridModel aiGridModel;
-        WordFindable wordFinder;
-        IAiGoWordFinder goWordFinder;
-        WordValidatable wordValidator;
-        IGoScorer goScorer;
-        IAiGoPlacer goPlacer;
+        private readonly IAiGridModel aiGridModel;
+        private readonly WordFindable wordFinder;
+        private readonly IAiGoWordFinder goWordFinder;
+        private readonly WordValidatable wordValidator;
+        private readonly IGoScorer goScorer;
+        private readonly IAiGoPlacer goPlacer;
+
         public AiGoHandler(
             IAiGridModel aiGridModel,
             WordFindable wordFinder,

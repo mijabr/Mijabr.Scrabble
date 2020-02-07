@@ -14,6 +14,7 @@ namespace Mijabr.Language.Tests
         [SetUp]
         public void SetUp()
         {
+            words = new List<string>();
             itemLister = new ItemLister();
         }
 

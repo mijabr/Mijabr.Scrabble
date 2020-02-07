@@ -17,10 +17,10 @@ export class ScrabbleService {
     return this.apiService.post('scrabble/api/scrabble/getsquares');
   }
 
-  continueGame(): Observable<ScrabbleGame> {
+  continueGame(): ScrabbleGame {
     const gameJson = localStorage.getItem('scrabble-game');
     const game: ScrabbleGame = JSON.parse(gameJson);
-    return Observable.create(game);
+    return game;
   }
 
   saveGame(game: ScrabbleGame) {

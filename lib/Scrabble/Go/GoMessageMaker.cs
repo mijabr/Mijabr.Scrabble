@@ -1,6 +1,5 @@
 ﻿using Mijabr.Language;
 using Scrabble.Value;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +7,8 @@ namespace Scrabble.Go
 {
     public class GoMessageMaker : IGoMessageMaker
     {
-        IItemLister itemLister;
+        private readonly IItemLister itemLister;
+
         public GoMessageMaker(IItemLister itemLister)
         {
             this.itemLister = itemLister;
@@ -17,9 +17,9 @@ namespace Scrabble.Go
         public string GetGoMessage(string playerName, IEnumerable<GoWord> goWords, int goScore)
         {
             var words = GetWordsList(goWords);
-            var message = string.Empty;
+            string message;
 
-            if (words.Count() == 0)
+            if (words.Count == 0)
             {
                 message = "You made no words.";
             }
@@ -40,15 +40,9 @@ namespace Scrabble.Go
             return message;
         }
 
-        List<string> GetWordsList(IEnumerable<GoWord> goWords)
+        private static List<string> GetWordsList(IEnumerable<GoWord> goWords)
         {
-            var words = new List<string>();
-            foreach (var goWord in goWords)
-            {
-                words.Add(goWord.Word);
-            }
-
-            return words;
+            return goWords.Select(goWord => goWord.Word).ToList();
         }
     }
 }

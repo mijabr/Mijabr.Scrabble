@@ -5,7 +5,8 @@ namespace Scrabble.Go
 {
     public class GoWordFinder : IGoWordFinder
     {
-        IGridModel gridModel;
+        private readonly IGridModel gridModel;
+
         public GoWordFinder(IGridModel gridModel)
         {
             this.gridModel = gridModel;
@@ -22,13 +23,13 @@ namespace Scrabble.Go
             return words;
         }
 
-        List<GoWord> words;
-        GoNavigator mainNav;
-        GoNavigator sideNav;
+        private List<GoWord> words;
+        private GoNavigator mainNav;
+        private GoNavigator sideNav;
 
-        void FindMainWord()
+        private void FindMainWord()
         {
-            string word = string.Empty;
+            var word = string.Empty;
             var goLetters = new List<GoLetter>();
 
             while (mainNav.Main < 15 && !gridModel.Grid[mainNav.X, mainNav.Y].IsEmpty())
@@ -47,7 +48,7 @@ namespace Scrabble.Go
             AddMainWord(word, goLetters);
         }
 
-        void FindSideWord()
+        private void FindSideWord()
         {
             sideNav.Copy(mainNav);
             MoveToSideWordStart();
@@ -55,23 +56,22 @@ namespace Scrabble.Go
             AddSideWord(side.word, side.goLetters);
         }
 
-        void MoveToSideWordStart()
+        private void MoveToSideWordStart()
         {
-            if (sideNav.Side >= 0)
+            if (sideNav.Side < 0) return;
+
+            sideNav.Side--;
+            while (sideNav.Side >= 0 && !gridModel.Grid[sideNav.X, sideNav.Y].IsEmpty())
             {
                 sideNav.Side--;
-                while (sideNav.Side >= 0 && !gridModel.Grid[sideNav.X, sideNav.Y].IsEmpty())
-                {
-                    sideNav.Side--;
-                }
-
-                sideNav.Side++;
             }
+
+            sideNav.Side++;
         }
 
-        (string, List<GoLetter>) GetSideWord()
+        private (string, List<GoLetter>) GetSideWord()
         {
-            string word = string.Empty;
+            var word = string.Empty;
             var goLetters = new List<GoLetter>();
 
             while (sideNav.Side < 15 && !gridModel.Grid[sideNav.X, sideNav.Y].IsEmpty())
@@ -84,7 +84,7 @@ namespace Scrabble.Go
             return (word, goLetters);
         }
 
-        void AddMainWord(string word, List<GoLetter> goLetters)
+        private void AddMainWord(string word, List<GoLetter> goLetters)
         {
             if (word.Length > 0)
             {
@@ -96,7 +96,7 @@ namespace Scrabble.Go
             }
         }
 
-        void AddSideWord(string word, List<GoLetter> goLetters)
+        private void AddSideWord(string word, List<GoLetter> goLetters)
         {
             if (word.Length > 1)
             {

@@ -37,9 +37,9 @@ namespace Scrabble.Play
             return board.Squares;
         }
 
-        public Game NewGame()
+        public Game NewGame(string playerName)
         {
-            var game = gameFactory.NewGame();
+            var game = gameFactory.NewGame(playerName);
             drawer.DrawTilesForAllPlayers(game);
             gameRepo.Set(game);
             return game;

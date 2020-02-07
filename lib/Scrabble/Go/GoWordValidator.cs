@@ -8,8 +8,9 @@ namespace Scrabble.Go
 {
     public class GoWordValidator : IGoWordValidator
     {
-        WordValidatable wordValidator;
-        IItemLister itemLister;
+        private readonly WordValidatable wordValidator;
+        private readonly IItemLister itemLister;
+
         public GoWordValidator(WordValidatable wordValidator, IItemLister itemLister)
         {
             this.wordValidator = wordValidator;
@@ -18,7 +19,7 @@ namespace Scrabble.Go
 
         public GoValidationResult ValidateWords(IEnumerable<GoWord> goWords)
         {
-            if (goWords.Count() == 0)
+            if (!goWords.Any())
             {
                 return NoWordsErrorResult();
             }
@@ -26,7 +27,7 @@ namespace Scrabble.Go
             return CheckWords(goWords);
         }
 
-        GoValidationResult CheckWords(IEnumerable<GoWord> goWords)
+        private GoValidationResult CheckWords(IEnumerable<GoWord> goWords)
         {
             var invalidWords = new List<string>();
             foreach (var goWord in goWords)
@@ -37,31 +38,29 @@ namespace Scrabble.Go
                 }
             }
 
-            if (invalidWords.Count() > 0)
-            {
-                string words = itemLister.ToString(invalidWords);
-                string areInvalid = (invalidWords.Count() == 1) ? " is not a valid word" : " are not valid words";
-                return new GoValidationResult()
-                {
-                    IsValid = false,
-                    Message = $"{words}{areInvalid}"
-                };
-            }
+            if (!invalidWords.Any()) return SuccessResult();
 
-            return SuccessResult();
+            var words = itemLister.ToString(invalidWords);
+            var areInvalid = (invalidWords.Count() == 1) ? " is not a valid word" : " are not valid words";
+            return new GoValidationResult()
+            {
+                IsValid = false,
+                Message = $"{words}{areInvalid}"
+            };
+
         }
 
-        static GoValidationResult SuccessResult()
+        private static GoValidationResult SuccessResult()
         {
-            return new GoValidationResult()
+            return new GoValidationResult
             {
                 IsValid = true
             };
         }
 
-        static GoValidationResult NoWordsErrorResult()
+        private static GoValidationResult NoWordsErrorResult()
         {
-            return new GoValidationResult()
+            return new GoValidationResult
             {
                 IsValid = false,
                 Message = "No words were made!"

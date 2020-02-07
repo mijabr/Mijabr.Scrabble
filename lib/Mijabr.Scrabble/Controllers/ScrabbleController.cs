@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Scrabble.Go;
 using Scrabble.Persist;
 using Scrabble.Play;
 using Scrabble.Value;
 using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace Mijabr.Scrabble.Controllers
 {
@@ -12,10 +14,14 @@ namespace Mijabr.Scrabble.Controllers
     public class ScrabbleController
     {
         private readonly IScrabbleManager scrabbleManager;
+        private readonly IHttpContextAccessor httpContextAccessor;
 
-        public ScrabbleController(IScrabbleManager scrabbleManager)
+        public ScrabbleController(
+            IScrabbleManager scrabbleManager,
+            IHttpContextAccessor httpContextAccessor)
         {
             this.scrabbleManager = scrabbleManager;
+            this.httpContextAccessor = httpContextAccessor;
         }
 
         [HttpPost("getsquares")]
@@ -29,7 +35,8 @@ namespace Mijabr.Scrabble.Controllers
         [Authorize]
         public Game NewGame()
         {
-            return scrabbleManager.NewGame();
+            var user = (httpContextAccessor.HttpContext.User.Identity as ClaimsIdentity);
+            return scrabbleManager.NewGame(user?.Name ?? "Player");
         }
 
         [HttpPost("submitgo")]

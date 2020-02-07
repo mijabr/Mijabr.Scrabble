@@ -20,4 +20,10 @@
     <ProjectReference Include="..\Words\Words.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="dictionary.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

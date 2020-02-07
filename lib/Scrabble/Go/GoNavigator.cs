@@ -16,16 +16,13 @@
             Y = nav.Y;
         }
 
-        bool isHorizontal;
+        private bool isHorizontal;
         public int X { get; private set; }
         public int Y { get; private set; }
 
         public int Main
         {
-            get
-            {
-                return isHorizontal ? X : Y;
-            }
+            get => isHorizontal ? X : Y;
 
             set
             {
@@ -42,10 +39,7 @@
 
         public int Side
         {
-            get
-            {
-                return isHorizontal ? Y : X;
-            }
+            get => isHorizontal ? Y : X;
 
             set
             {

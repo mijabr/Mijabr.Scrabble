@@ -7,44 +7,44 @@ namespace Scrabble.Ai
 {
     public class AiGoWordFinder : IAiGoWordFinder
     {
-        IAiGridModel gridModel;
-        Board board;
+        private readonly IAiGridModel gridModel;
+        private readonly Board board;
+
         public AiGoWordFinder(IAiGridModel gridModel, Board board)
         {
             this.gridModel = gridModel;
             this.board = board;
         }
 
-        public IEnumerable<GoWord> FindWords(string mainWord, AiCandidate candidate)
+        public IEnumerable<GoWord> FindWords(string theMainWord, AiCandidate theCandidate)
         {
             goWords = new List<GoWord>();
-            if (mainWord != null && mainWord.Length > 0)
-            {
-                this.mainWord = mainWord;
-                this.candidate = candidate;
-                FindWords();
-            }
+            if (string.IsNullOrEmpty(theMainWord)) return goWords;
+
+            this.mainWord = theMainWord;
+            this.candidate = theCandidate;
+            FindWords();
 
             return goWords;
         }
 
-        List<GoWord> goWords;
-        string mainWord;
-        List<GoLetter> mainGoLetters;
-        AiCandidate candidate;
-        GoNavigator mainNav;
-        GoNavigator sideNav;
-        int patternPos;
-        char currentPatternChar;
+        private List<GoWord> goWords;
+        private string mainWord;
+        private List<GoLetter> mainGoLetters;
+        private AiCandidate candidate;
+        private GoNavigator mainNav;
+        private GoNavigator sideNav;
+        private int patternPos;
+        private char currentPatternChar;
 
-        void FindWords()
+        private void FindWords()
         {
             mainNav = new GoNavigator(candidate.StartX, candidate.StartY, candidate.Orientation == 0);
 
             TraverseMainWord();
         }
 
-        void TraverseMainWord()
+        private void TraverseMainWord()
         {
             mainGoLetters = new List<GoLetter>();
             patternPos = 0;
@@ -63,7 +63,7 @@ namespace Scrabble.Ai
             AddMainWord();
         }
 
-        void FindSideWord()
+        private void FindSideWord()
         {
             if (currentPatternChar == '?')
             {
@@ -74,23 +74,22 @@ namespace Scrabble.Ai
             }
         }
 
-        void MoveToSideWordStart()
+        private void MoveToSideWordStart()
         {
-            if (sideNav.Side > 0)
+            if (sideNav.Side <= 0) return;
+
+            sideNav.Side--;
+            while (sideNav.Side > 0 && gridModel.Grid[sideNav.X, sideNav.Y].Letter != 0)
             {
                 sideNav.Side--;
-                while (sideNav.Side > 0 && gridModel.Grid[sideNav.X, sideNav.Y].Letter != 0)
-                {
-                    sideNav.Side--;
-                }
-
-                sideNav.Side++;
             }
+
+            sideNav.Side++;
         }
 
-        (string, List<GoLetter>) GetSideWord()
+        private (string, List<GoLetter>) GetSideWord()
         {
-            string word = string.Empty;
+            var word = string.Empty;
             var goLetters = new List<GoLetter>();
 
             while (sideNav.Side < 15 && GetSideLetter() != 0)
@@ -103,7 +102,7 @@ namespace Scrabble.Ai
             return (word, goLetters);
         }
 
-        char GetSideLetter()
+        private char GetSideLetter()
         {
             if (sideNav.X == mainNav.X && sideNav.Y == mainNav.Y)
             {
@@ -115,19 +114,12 @@ namespace Scrabble.Ai
             }
         }
 
-        GoLetter GetGoLetter(int x, int y, bool isPlayerTile)
+        private GoLetter GetGoLetter(int x, int y, bool isPlayerTile)
         {
-            if (isPlayerTile)
-            {
-                return GetPlayerGoLetter(x, y);
-            }
-            else
-            {
-                return GetBoardGoLetter(x, y);
-            }
+            return isPlayerTile ? GetPlayerGoLetter(x, y) : GetBoardGoLetter(x, y);
         }
 
-        GoLetter GetPlayerGoLetter(int x, int y)
+        private GoLetter GetPlayerGoLetter(int x, int y)
         {
             return new GoLetter()
             {
@@ -137,7 +129,7 @@ namespace Scrabble.Ai
             };
         }
 
-        GoLetter GetBoardGoLetter(int x, int y)
+        private GoLetter GetBoardGoLetter(int x, int y)
         {
             return new GoLetter()
             {
@@ -147,7 +139,7 @@ namespace Scrabble.Ai
             };
         }
 
-        void AddMainWord()
+        private void AddMainWord()
         {
             goWords.Add(new GoWord()
             {
@@ -156,7 +148,7 @@ namespace Scrabble.Ai
             });
         }
 
-        void AddSideWord(string word, List<GoLetter> goLetters)
+        private void AddSideWord(string word, List<GoLetter> goLetters)
         {
             if (word.Length > 1)
             {

@@ -13,15 +13,10 @@ namespace Scrabble.Persist
 
         public Game GetById(Guid id)
         {
-            if (games.TryGetValue(id, out Game game))
-            {
-                return game;
-            }
-
-            return null;
+            return games.TryGetValue(id, out var game) ? game : null;
         }
 
-        Dictionary<Guid, Game> games = new Dictionary<Guid, Game>();
+        private readonly Dictionary<Guid, Game> games = new Dictionary<Guid, Game>();
 
         public List<ShortGame> GetShortList()
         {

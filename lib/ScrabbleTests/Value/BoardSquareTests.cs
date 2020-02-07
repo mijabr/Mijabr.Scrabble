@@ -33,7 +33,7 @@ namespace Scrabble.Tests
         [TestMethod]
         public void CanCreateTripleLetterSquare()
         {
-            square = BoardSquare.TrippleLetterSquare();
+            square = BoardSquare.TripleLetterSquare();
             AssertSquareNameLetterBonusAndWordBonus("TL", 3, 1);
         }
 
@@ -47,7 +47,7 @@ namespace Scrabble.Tests
         [TestMethod]
         public void CanCreateTripleWordSquare()
         {
-            square = BoardSquare.TrippleWordSquare();
+            square = BoardSquare.TripleWordSquare();
             AssertSquareNameLetterBonusAndWordBonus("TW", 1, 3);
         }
 

@@ -38,15 +38,14 @@ export class ScrabbleGameComponent implements OnInit, AfterViewChecked  {
   }
 
   continueGame () {
-    this.scrabbleService.continueGame().subscribe(response => {
-      if (response !== undefined && response !== null) {
-        this.game = response;
-        this.addMessage('Welcome back. Your game is still here waiting for you.');
-        this.checkAiGo();
-      } else {
-        this.addMessage('Welcome to scrabble. Click Start New Game to begin.');
-      }
-    });
+    let game = this.scrabbleService.continueGame();
+    if (game !== undefined && game !== null) {
+      this.game = game;
+      this.addMessage('Welcome back. Your game is still here waiting for you.');
+      this.checkAiGo();
+    } else {
+      this.addMessage('Welcome to scrabble. Click Start New Game to begin.');
+    }
   }
 
   newGame() {
@@ -68,21 +67,6 @@ export class ScrabbleGameComponent implements OnInit, AfterViewChecked  {
 
   ngAfterViewChecked() {
     this.scrollToBottom();
-  }
-
-  submitGo() {
-    this.scrabbleService.submitGo(this.game).subscribe(response => {
-      if (response.isValid) {
-        this.game = response.game;
-        this.scrabbleService.saveGame(this.game);
-      }
-
-      this.addMessage(response.message);
-
-      this.checkGameOver(this.game);
-
-      this.checkAiGo();
-    });
   }
 
   checkGameOver(game: ScrabbleGame) {
@@ -133,6 +117,21 @@ export class ScrabbleGameComponent implements OnInit, AfterViewChecked  {
 
       this.addMessage(' Got it!');
       this.submitGo();
+    });
+  }
+
+  submitGo() {
+    this.scrabbleService.submitGo(this.game).subscribe(response => {
+      if (response.isValid) {
+        this.game = response.game;
+        this.scrabbleService.saveGame(this.game);
+      }
+
+      this.addMessage(response.message);
+
+      this.checkGameOver(this.game);
+
+      this.checkAiGo();
     });
   }
 

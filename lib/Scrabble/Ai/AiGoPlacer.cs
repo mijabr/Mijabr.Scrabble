@@ -10,7 +10,7 @@ namespace Scrabble.Ai
             this.game = game;
             ReturnAllTilesToTray();
 
-            if (go == null || go.Candidate.SearchPattern == null)
+            if (go?.Candidate.SearchPattern == null)
             {
                 return;
             }
@@ -23,9 +23,9 @@ namespace Scrabble.Ai
             PlaceTiles();
         }
 
-        void ReturnAllTilesToTray()
+        private void ReturnAllTilesToTray()
         {
-            bool done = false;
+            var done = false;
             while (!done)
             {
                 var tile = game.CurrentPlayer().Tiles.FirstOrDefault(t => t.Location != "tray");
@@ -41,13 +41,13 @@ namespace Scrabble.Ai
             }
         }
 
-        AiValidGo go;
-        Game game;
-        int currentX;
-        int currentY;
-        int currentWordPosition;
+        private AiValidGo go;
+        private Game game;
+        private int currentX;
+        private int currentY;
+        private int currentWordPosition;
 
-        void PlaceTiles()
+        private void PlaceTiles()
         {
             foreach (var searchCharacter in go.Candidate.SearchPattern)
             {
@@ -69,17 +69,16 @@ namespace Scrabble.Ai
             }
         }
 
-        void PlaceTile()
+        private void PlaceTile()
         {
             var letter = go.MainWord[currentWordPosition];
             var tile = game.CurrentPlayer().Tiles.FirstOrDefault(t => t.Location == "tray" && t.Letter == letter);
-            if (game.CurrentPlayer().Tiles.Remove(tile))
-            {
-                tile.Location = "board";
-                tile.BoardPositionX = currentX;
-                tile.BoardPositionY = currentY;
-                game.CurrentPlayer().Tiles.Add(tile);
-            }
+            if (!game.CurrentPlayer().Tiles.Remove(tile)) return;
+
+            tile.Location = "board";
+            tile.BoardPositionX = currentX;
+            tile.BoardPositionY = currentY;
+            game.CurrentPlayer().Tiles.Add(tile);
         }
     }
 }

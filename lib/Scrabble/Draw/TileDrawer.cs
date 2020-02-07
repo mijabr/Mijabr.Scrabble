@@ -8,18 +8,17 @@ namespace Scrabble.Draw
     {
         public void DrawTilesForPlayer(Drawable drawable)
         {
-            this.drawable = drawable;
-            for (int i = 0; i < 7; i++)
+            for (var i = 0; i < 7; i++)
             {
-                DrawOneTile();
+                DrawOneTile(drawable);
             }
         }
 
         public void DrawTilesForAllPlayers(Drawable drawable)
         {
-            int currentPlayer = drawable.PlayerTurn;
+            var currentPlayer = drawable.PlayerTurn;
 
-            for(int n = 0; n < drawable.Players.Count; n++)
+            for(var n = 0; n < drawable.Players.Count; n++)
             {
                 drawable.PlayerTurn = n;
                 DrawTilesForPlayer(drawable);
@@ -28,32 +27,28 @@ namespace Scrabble.Draw
             drawable.PlayerTurn = currentPlayer;
         }
 
-        Drawable drawable;
-
-        void DrawOneTile()
+        private static void DrawOneTile(Drawable drawable)
         {
-            if (drawable.BagTiles != null && drawable.CurrentPlayer().Tiles != null)
-            {
-                if (drawable.BagTiles.Count() > 0 && drawable.CurrentPlayer().Tiles.Count() < 7)
-                {
-                    Random r = new Random();
-                    var tile = drawable.BagTiles.ElementAt(r.Next(drawable.BagTiles.Count()));
-                    MoveTileToTray(tile);
-                }
-            }
+            if (drawable.BagTiles == null || drawable.CurrentPlayer().Tiles == null) return;
+
+            if (drawable.BagTiles.Count <= 0 || drawable.CurrentPlayer().Tiles.Count >= 7) return;
+
+            var r = new Random();
+            var tile = drawable.BagTiles.ElementAt(r.Next(drawable.BagTiles.Count()));
+            MoveTileToTray(tile, drawable);
         }
 
-        void MoveTileToTray(Tile tile)
+        private static void MoveTileToTray(Tile tile, Drawable drawable)
         {
             drawable.BagTiles.Remove(tile);
             tile.Location = "tray";
-            tile.TrayPosition = GetFirstFreeTrayPosition();
+            tile.TrayPosition = GetFirstFreeTrayPosition(drawable);
             drawable.CurrentPlayer().Tiles.Add(tile);
         }
 
-        int GetFirstFreeTrayPosition()
+        private static int GetFirstFreeTrayPosition(Drawable drawable)
         {
-            for (int position = 0; position < 7; position++)
+            for (var position = 0; position < 7; position++)
             {
                 if (drawable.CurrentPlayer().Tiles.FirstOrDefault(t => t.TrayPosition == position).IsDefault())
                 {

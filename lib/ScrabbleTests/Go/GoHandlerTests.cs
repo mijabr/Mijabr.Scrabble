@@ -26,7 +26,7 @@ namespace Scrabble.Tests
         [TestInitialize]
         public void Setup()
         {
-            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame();
+            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame("Player");
             goValidator = Substitute.For<IGoValidator>();
             drawer = Substitute.For<ITileDrawer>();
             goWordFinder = Substitute.For<IGoWordFinder>();

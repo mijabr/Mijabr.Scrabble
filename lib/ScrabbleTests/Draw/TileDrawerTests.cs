@@ -21,7 +21,7 @@ namespace Scrabble.Tests
         public void Setup()
         {
             drawer = new TileDrawer();
-            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame();
+            game = new GameFactory(Substitute.For<IDateTimeOffset>()).NewGame("Player");
         }
 
         void GivenOneBagTilesIsLeft()

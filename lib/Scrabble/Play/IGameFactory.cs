@@ -4,6 +4,6 @@ namespace Scrabble.Play
 {
     public interface IGameFactory
     {
-        Game NewGame();
+        Game NewGame(string playerName);
     }
 }

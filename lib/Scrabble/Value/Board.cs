@@ -33,46 +33,46 @@ namespace Scrabble.Value
             return Squares[y * 15 + x];
         }
 
-        int x = 0;
-        int y = 0;
+        private int x = 0;
+        private int y = 0;
 
-        BoardSquare NS()
+        private BoardSquare NS()
         {
             Next();
             return BoardSquare.NormalSquare(x++, y);
         }
 
-        BoardSquare DL()
+        private BoardSquare DL()
         {
             Next();
             return BoardSquare.DoubleLetterSquare(x++, y);
         }
 
-        BoardSquare TL()
+        private BoardSquare TL()
         {
             Next();
-            return BoardSquare.TrippleLetterSquare(x++, y);
+            return BoardSquare.TripleLetterSquare(x++, y);
         }
 
-        BoardSquare DW()
+        private BoardSquare DW()
         {
             Next();
             return BoardSquare.DoubleWordSquare(x++, y);
         }
 
-        BoardSquare TW()
+        private BoardSquare TW()
         {
             Next();
-            return BoardSquare.TrippleWordSquare(x++, y);
+            return BoardSquare.TripleWordSquare(x++, y);
         }
 
-        BoardSquare ST()
+        private BoardSquare ST()
         {
             Next();
             return BoardSquare.StartingSquare(x++, y);
         }
 
-        void Next()
+        private void Next()
         {
             if (x >= 15)
             {

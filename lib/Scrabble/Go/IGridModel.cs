@@ -5,7 +5,7 @@ namespace Scrabble.Go
 {
     public interface IGridModel
     {
-        void Build(List<Tile> PlayerTiles, List<Tile> BoardTiles);
+        void Build(List<Tile> playerTiles, List<Tile> boardTiles);
         GridModelTile[,] Grid { get; }
         BoardSquare GetBoardSquare(int x, int y);
         GoLetter GetGoLetter(int x, int y);

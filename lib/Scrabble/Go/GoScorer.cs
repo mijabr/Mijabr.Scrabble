@@ -7,7 +7,7 @@ namespace Scrabble.Go
     {
         public int ScoreGo(IEnumerable<GoWord> goWords)
         {
-            int score = 0;
+            var score = 0;
             foreach (var goWord in goWords)
             {
                 var wordScore = 0;
