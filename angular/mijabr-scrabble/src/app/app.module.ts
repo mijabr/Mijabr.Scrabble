@@ -5,27 +5,35 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LibraryModule } from './library/module/library.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NgDragDropModule } from 'ng-drag-drop';
+import { AuthModule, OidcSecurityService, OidcConfigService } from 'angular-auth-oidc-client';
 
 import { AppComponent } from './app.component';
-import { ScrabbleGameComponent } from './scrabble/component/scrabble-game/scrabble-game.component';
-import { ScrabbleBoardComponent } from './scrabble/component/scrabble-board/scrabble-board.component';
-import { ScrabblePlayerComponent } from './scrabble/component/scrabble-player/scrabble-player.component';
-import { ScrabbleTileComponent } from './scrabble/component/scrabble-tile/scrabble-tile.component';
-import { ScrabbleScoreComponent } from './scrabble/component/scrabble-score/scrabble-score.component';
-import { ScrabbleToolbarComponent } from './scrabble/component/scrabble-toolbar/scrabble-toolbar.component';
-import { ScrabbleGameListComponent } from './scrabble/component/scrabble-game-list/scrabble-game-list.component';
-import { ScrabbleService } from './scrabble/service/scrabble.service';
+import { ScrabbleGameComponent } from './component/scrabble-game/scrabble-game.component';
+import { ScrabbleBoardComponent } from './component/scrabble-board/scrabble-board.component';
+import { ScrabblePlayerComponent } from './component/scrabble-player/scrabble-player.component';
+import { ScrabbleTileComponent } from './component/scrabble-tile/scrabble-tile.component';
+import { ScrabbleScoreComponent } from './component/scrabble-score/scrabble-score.component';
+import { ScrabbleToolbarComponent } from './component/scrabble-toolbar/scrabble-toolbar.component';
+import { ScrabbleGameListComponent } from './component/scrabble-game-list/scrabble-game-list.component';
+import { ScrabbleService } from './service/scrabble.service';
 import { ApiService } from './service/api.service';
-import { HttpClientModule } from '@angular/common/http';
-import { EnvironmentService } from './service/environment.service';
-import { WordFinderComponent } from './words/component/word-finder/word-finder.component';
-import { WordSelectorComponent } from './words/component/word-selector/word-selector.component';
-import { WordCheckerComponent } from './words/component/word-checker/word-checker.component';
-import { WordService } from './words/service/word.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { WordFinderComponent } from './component/word-finder/word-finder.component';
+import { WordSelectorComponent } from './component/word-selector/word-selector.component';
+import { WordCheckerComponent } from './component/word-checker/word-checker.component';
+import { WordService } from './service/word.service';
+import { AuthenticationService } from './service/authentication.service';
+import { AuthenticationInterceptor } from './service/authentication.interceptor';
+import { RedirectComponent } from './component/redirect/redirect.component';
+import { ToolbarComponent } from './component/toolbar/toolbar.component';
+import { UnauthorizedComponent } from './component/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    RedirectComponent,
+    UnauthorizedComponent,
+    ToolbarComponent,
     ScrabbleGameComponent,
     ScrabbleBoardComponent,
     ScrabblePlayerComponent,
@@ -43,16 +51,30 @@ import { WordService } from './words/service/word.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AuthModule.forRoot(),
     LibraryModule,
     AppRoutingModule,
     NgDragDropModule.forRoot()
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthenticationInterceptor,
+      multi: true
+    },
+    OidcSecurityService,
+    OidcConfigService,
+    AuthenticationService,
     ApiService,
     ScrabbleService,
-    EnvironmentService,
     WordService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(
+    private authenticationService: AuthenticationService
+  ) {
+    this.authenticationService.initialise();
+  }
+}

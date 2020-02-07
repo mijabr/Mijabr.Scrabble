@@ -1,0 +1,14 @@
+<div class='toolbar-wrap'>
+  <div class='toolbar'>
+    <div class='home'>
+      <a href='/home'>
+        <lib-icon-home background='black' fill='white' size='24'></lib-icon-home>
+      </a>
+    </div>
+    <div class='title'>{{title}}</div>
+    <div class='account' (click)='onClickAccount()'>
+      <lib-icon-account background='black' fill='white' size='24'></lib-icon-account>
+    </div>
+    <div *ngIf='isLoggedin' class='username'>Greetings {{username}}</div>
+  </div>
+</div>

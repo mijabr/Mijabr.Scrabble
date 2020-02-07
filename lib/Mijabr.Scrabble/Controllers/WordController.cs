@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using words;
 
 namespace Mijabr.Scrabble.Controllers
@@ -6,8 +7,8 @@ namespace Mijabr.Scrabble.Controllers
     [Route("scrabble/api/[controller]")]
     public class WordController
     {
-        private IsWordRequestHandler isWordRequestHandler;
-        private FindWordsRequestHandler findWordsRequestHandler;
+        private readonly IsWordRequestHandler isWordRequestHandler;
+        private readonly FindWordsRequestHandler findWordsRequestHandler;
 
         public WordController(
             IsWordRequestHandler isWordRequestHandler,
@@ -18,12 +19,14 @@ namespace Mijabr.Scrabble.Controllers
         }
 
         [HttpPost("isword")]
+        [Authorize]
         public IsWordResponseMessage IsWord([FromBody]IsWordRequestMessage message)
         {
             return isWordRequestHandler.IsWord(message);
         }
 
         [HttpPost("findwords")]
+        [Authorize]
         public FindWordsResponseMessage FindWords([FromBody]FindWordsRequestMessage message)
         {
             return findWordsRequestHandler.FindWords(message);

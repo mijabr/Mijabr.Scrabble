@@ -4,7 +4,7 @@ import { ScrabbleGame } from '../model/scrabble-game';
 // import { Jsonp } from '@angular/http';
 import { ScrabbleShortGame } from '../model/scrabble-short-game';
 import { Observable } from 'rxjs';
-import { ApiService } from '../../service/api.service';
+import { ApiService } from './api.service';
 
 @Injectable()
 export class ScrabbleService {
